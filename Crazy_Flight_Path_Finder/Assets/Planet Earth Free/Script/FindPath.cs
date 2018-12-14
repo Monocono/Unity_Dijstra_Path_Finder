@@ -215,13 +215,12 @@ public class FindPath : MonoBehaviour
 	public Spline[] spline = new Spline[30];
 	public void Line(List<string> temp)
 	{
-		if (temp_dept != Departure.captionText.text || temp_dest != Arrival.captionText.text)
-			for (int i = 0; i < 47; i++)
-			{
-				GameObject init = GameObject.Find(Airports[i]);
-				if (init.GetComponent<MeshRenderer>().material.color == Color.black)
-					init.GetComponent<MeshRenderer>().material.color = Color.yellow;
-			}
+		for (int i = 0; i < 47; i++)
+		{
+			GameObject init = GameObject.Find(Airports[i]);
+			if (init.GetComponent<MeshRenderer>().material.color == Color.black)
+				init.GetComponent<MeshRenderer>().material.color = Color.yellow;
+		}
 		for (int i = 0; i < temp.Count - 1; i++)
 		{
 			spline[i].gameObject.SetActive(true);

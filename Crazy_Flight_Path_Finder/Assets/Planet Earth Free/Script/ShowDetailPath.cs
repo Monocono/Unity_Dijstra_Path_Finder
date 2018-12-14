@@ -8,7 +8,7 @@ public class ShowDetailPath : MonoBehaviour
 	FindPath fp;
 	public Text[] text = new Text[16];
 	public GameObject detail;
-
+	public string[] detail_path = new string[16];
 	List<string> path;
 	List<int> cost;
 
@@ -52,6 +52,8 @@ public class ShowDetailPath : MonoBehaviour
 		sum = 0;
 		path = fp.temp;
 		cost = fp.listcost;
+		for (int i = 0; i < 16; i++)
+			text[i].text = "";
 		for (int i = 0; i < path.Count; i++)
 		{
 			text[i].gameObject.SetActive(true);
