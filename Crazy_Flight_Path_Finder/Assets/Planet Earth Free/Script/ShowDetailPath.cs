@@ -56,10 +56,10 @@ public class ShowDetailPath : MonoBehaviour
 		{
 			text[i].gameObject.SetActive(true);
 			if (i == path.Count - 1)
-				text[i].text = path[0] + " >> " + path[path.Count - 1] + "\nTotal Cost : " + sum;
+				text[i].text = path[0] + " >> " + path[path.Count - 1] + "\nTotal Cost : " + sum + "\n";
 			else
 			{
-				text[i].text = path[i] + " >> " + path[i + 1] + "\nCost : " + cost[i];
+				text[i].text = path[i] + " >> " + path[i + 1] + "\nCost : " + cost[i] + "\n";
 				sum += cost[i];
 			}
 		}
