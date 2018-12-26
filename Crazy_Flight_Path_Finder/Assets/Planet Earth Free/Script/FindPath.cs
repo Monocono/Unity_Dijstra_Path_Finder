@@ -173,7 +173,6 @@ public class FindPath : MonoBehaviour
 						else
 						{
 							q.UpdateItem(edge.dest);
-
 						}
 					}
 				}
